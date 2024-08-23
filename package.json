@@ -1,8 +1,8 @@
 {
-  "name": "quasar-project",
+  "name": "peepoheyproject",
   "version": "0.0.1",
-  "description": "A Quasar Project",
-  "productName": "Quasar App",
+  "description": "A project for ITCube hacaton. Special for SITEC",
+  "productName": "peepoHeyProject",
   "author": "Kotekemu <dan1il.barmin@yandex.ru>",
   "private": true,
   "scripts": {
