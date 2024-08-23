@@ -1,3 +1,5 @@
+import { comma } from 'postcss/lib/list'
+
 const routes = [
   {
     path: '/',
@@ -6,7 +8,13 @@ const routes = [
       { path: '', component: () => import('pages/IndexPage.vue') }
     ]
   },
-
+  {
+    path: '/game',
+    component: () => import('layouts/MainLayout.vue'),
+    children: [
+      { path: '', component: () => import('pages/GamePage.vue')}
+    ]
+  },
   // Always leave this as last one,
   // but you can also remove it
   {

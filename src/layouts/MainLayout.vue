@@ -3,9 +3,9 @@
     <q-page-container class="main-container">
       <router-view />
     </q-page-container>
-    <q-footer v-show="!$route.meta.hideFooBar" class="fixed-bottom footerBar">
-      <FooterComponent />
-    </q-footer>
+    <!-- <q-footer v-show="!$route.meta.hideFooBar" class="fixed-bottom footerBar"> -->
+      <!-- <FooterComponent /> -->
+    <!-- </q-footer> -->
   </q-layout>
 </template>
 
@@ -19,11 +19,11 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
-.footerBar {
-  width: 100%;
-  height: 62px;
-  background: #FFFFFF;
-}
+// .footerBar {
+//   width: 100%;
+//   height: 62px;
+//   background: #FFFFFF;
+// }
 .main-container {
   padding: 0px;
   margin-bottom: 0px;
