@@ -33,9 +33,9 @@ export default {
   },
   methods: {
     async checkWebsiteSafety() {
-      const apiKey = "cc9a9714-8119-4e22-a640-fbadd17ff92b";
-      const apiUrl =
-        "https://safebrowsing.yandex.net/v4/threatMatches:find?key=cc9a9714-8119-4e22-a640-fbadd17ff92b";
+      const apiKey = "AIzaSyDCYXGYTW-c_nsAukGk06lkDfR2-0tlvMU";
+      const apiUrl = "https://safebrowsing.googleapis.com/v4/threatMatches:find?key=AIzaSyDCYXGYTW-c_nsAukGk06lkDfR2-0tlvMU";
+
 
       const requestBody = {
         client: {
