@@ -33,9 +33,15 @@ export default {
   },
   methods: {
     async checkWebsiteSafety() {
-      const apiKey = "AIzaSyDCYXGYTW-c_nsAukGk06lkDfR2-0tlvMU";
-      const apiUrl = "https://safebrowsing.googleapis.com/v4/threatMatches:find?key=AIzaSyDCYXGYTW-c_nsAukGk06lkDfR2-0tlvMU";
+      if (!this.isValidUrl(this.url)) {
+        this.result = "Неверный URL";
+        this.resultColor = "negative";
+        return;
+      }
 
+      const apiKey = "AIzaSyDCYXGYTW-c_nsAukGk06lkDfR2-0tlvMU";
+      const apiUrl =
+        "https://safebrowsing.googleapis.com/v4/threatMatches:find?key=AIzaSyDCYXGYTW-c_nsAukGk06lkDfR2-0tlvMU";
 
       const requestBody = {
         client: {
@@ -72,6 +78,14 @@ export default {
         console.error("Ошибка при проверке:", error);
         this.result = "Ошибка при проверке";
         this.resultColor = "negative";
+      }
+    },
+    isValidUrl(string) {
+      try {
+        new URL(string);
+        return true;
+      } catch (_) {
+        return false;
       }
     },
   },
